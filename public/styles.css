@@ -19,6 +19,7 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
 }
 
 nav li {
@@ -53,6 +54,22 @@ nav h1 a {
     border-radius: 36px;
     background: #FEE996;
     color: #444;
+}
+
+.btn-signup {
+    border-radius: 36px;
+    background: #FEE996;
+}
+
+nav li a:hover {
+    color: cornflowerblue;
+}
+
+nav li a.btn-signup:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FEE996;
+    background: white;
 }
 
 form h2 {
