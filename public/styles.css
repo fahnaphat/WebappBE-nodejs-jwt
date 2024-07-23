@@ -5,9 +5,6 @@ body {
     margin: 0;
     font-size: 1.2rem;
     letter-spacing: 1px;
-}
-
-nav, footer, header, button {
     font-family: 'Quicksand', sans-serif;
     color: #444;
 }
@@ -32,10 +29,13 @@ nav li a {
     text-decoration: none;
     display: block;
     padding: 10px 16px;
+    color: #444;
+    font-weight: bold;
 }
 
 nav h1 a {
     text-decoration: none;
+    color: cornflowerblue;
 }
 
 .mainheader-container {
@@ -45,6 +45,52 @@ nav h1 a {
     align-items: center;
     background-color: lightskyblue;
     height: 50%;
+}
+
+.btn-start {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 36px;
+    background: #FEE996;
+    color: #444;
+}
+
+form h2 {
+    font-size: 2.4em;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+form {
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background: white;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 80px;
+    margin: 80PX AUTO;
+    max-width: 1200px;
+}
+
+.post-item {
+    display: inline-block;
+    border-radius: 20px;
+    background: white;
+    position: relative;
+    text-align: center;
+    padding: 0 20px 30px 20px
+}
+
+.post-item img {
+    width: 100px;
+    margin: -30px auto 20px;
 }
 
 .footer-container {
