@@ -27,7 +27,7 @@ async function connectdb() {
         console.log(error)
     }
 }
-// connectdb();
+connectdb();
 
 app.get('/', (req, res) => res.render('home'))
 app.get('/post', (req, res) => res.render('post'))
