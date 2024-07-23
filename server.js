@@ -11,6 +11,7 @@ const port = process.env.PORT || 5500
 
 // middleware
 app.use(express.static('public'))
+app.use(express.json())
 app.use(express.urlencoded({ extended: true })) // to parse form data
 
 // view engine
