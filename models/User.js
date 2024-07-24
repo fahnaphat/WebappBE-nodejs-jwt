@@ -4,6 +4,14 @@ import bcrypt from "bcrypt";
 
 //create Schema for database
 const userSchema = new mongoose.Schema({
+    firstname: {
+        type: String,
+        required: [true, 'Please enter youre firstname']
+    },
+    lastname: {
+        type: String,
+        required: [true, 'Please enter youre lastname']
+    },
     email: {
         type: String,
         required: [true, 'Please enter an email'],
