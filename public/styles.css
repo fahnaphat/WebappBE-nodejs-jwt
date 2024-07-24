@@ -6,7 +6,7 @@ body {
     font-size: 1.2rem;
     letter-spacing: 1px;
     font-family: 'Quicksand', sans-serif;
-    color: #444;
+    color: #313131;
     background: #fafafa;
 }
 
@@ -31,13 +31,13 @@ nav li a {
     text-decoration: none;
     display: block;
     padding: 10px 16px;
-    color: #444;
-    font-weight: bold;
+    color: #003049;
+    font-weight: 600;
 }
 
 nav h1 a {
     text-decoration: none;
-    color: cornflowerblue;
+    color: #003049;
 }
 
 .mainheader-container {
@@ -45,7 +45,7 @@ nav h1 a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: #EAE2B7;
     height: 50%;
 }
 
@@ -53,23 +53,24 @@ nav h1 a {
     text-decoration: none;
     padding: 10px;
     border-radius: 36px;
-    background: #FEE996;
-    color: #444;
+    background: #F77F00;
+    color: white;
+    font-weight: bold;
 }
 
 .btn-signup {
-    border-radius: 36px;
-    background: #FEE996;
-    border: 3px solid white;
+    border: 1px solid #003049;
+    border-radius: 7px;
 }
 
 nav li a:hover {
-    color: cornflowerblue;
+    color: #F77F00;
 }
 
 nav li a.btn-signup:hover {
-    border: 3px solid #FEE996;
-    background: white;
+    border: 1px solid #003049;
+    background: #003049;
+    color: white;
 }
 
 form h2 {
@@ -112,8 +113,8 @@ form .pwd-detail {
 
 .button { 
     margin-top: 30px;
-    border-radius: 36px;
-    background: #FEE996;
+    border-radius: 7px;
+    background: #F77F00;
     border: 0;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
@@ -123,16 +124,16 @@ form .pwd-detail {
     padding: 10px 16px;
     letter-spacing: 2px;
     cursor: pointer;
-    color: #444;
+    color: white;
 }
 
 .button:hover {
-    background: #ffe26e;
+    background: #c96800;
     padding: 10px 16px;
 }
 
 form div {
-    color: #ff0022;
+    color: #D62828;
     margin: 3px 2px;
     font-size: 0.8em;
     font-weight: bold;
