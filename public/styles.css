@@ -7,6 +7,7 @@ body {
     letter-spacing: 1px;
     font-family: 'Quicksand', sans-serif;
     color: #444;
+    background: #fafafa;
 }
 
 nav {
@@ -59,6 +60,7 @@ nav h1 a {
 .btn-signup {
     border-radius: 36px;
     background: #FEE996;
+    border: 3px solid white;
 }
 
 nav li a:hover {
@@ -66,25 +68,74 @@ nav li a:hover {
 }
 
 nav li a.btn-signup:hover {
-    border-style: solid;
-    border-width: 3px;
-    border-color: #FEE996;
+    border: 3px solid #FEE996;
     background: white;
 }
 
 form h2 {
     font-size: 2.4em;
     font-weight: 900;
-    margin-bottom: 40px;
+    margin: 10px 0 20px 0;
 }
 
 form {
-    width: 360px;
-    margin: 0 auto;
+    width: 450px;
+    margin: 20px auto;
     padding: 30px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     border-radius: 10px;
+    border: 1px solid #ddd;
     background: white;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+form input {
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+form .pwd-detail {
+    color: #797979;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.button { 
+    margin-top: 30px;
+    border-radius: 36px;
+    background: #FEE996;
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #444;
+}
+
+.button:hover {
+    background: #ffe26e;
+    padding: 10px 16px;
+}
+
+form div {
+    color: #ff0022;
+    margin: 3px 2px;
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 .posts {
@@ -112,7 +163,6 @@ form {
 
 .footer-container {
     text-align: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;

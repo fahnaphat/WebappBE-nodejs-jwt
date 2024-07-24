@@ -1,3 +1,22 @@
 <%- include('components/header'); -%>
-    <h2>Sign up</h2>
+    <form action="" method="post">
+        <h2>Sign up</h2>
+        <label for="fname">First name</label>
+        <input type="text" name="fname">
+        <div class="fname-error"></div>
+        <label for="lname">Last name</label>
+        <input type="text" name="lname">
+        <div class="lname-error"></div>
+        <label for="email">Email</label>
+        <input type="text" name="email">
+        <div class="email-error"></div>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <small class="pwd-detail">password must be less than 6 characters</small>
+        <div class="password-error"></div>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password">
+        <div class="confirm-password-error"></div>
+        <button type="submit" class="button">Sign up</button>
+    </form>
 <%- include('components/footer'); -%>
