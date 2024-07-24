@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import validator from "validator";
+import bcrypt from "bcrypt";
 
 //create Schema for database
 const userSchema = new mongoose.Schema({
@@ -17,16 +18,11 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-// fire a function after doc saved to db
-userSchema.post('save', function (doc, next) {
-    console.log('new user was created & saved', doc)
-    // for end of this function
-    next(); 
-})
-
 // fire a function before doc saved to db
-userSchema.pre('save', function (next) {
-    console.log('user about to be created & saved', this)
+userSchema.pre('save', async function (next) {
+    const salt = await bcrypt.genSalt();
+    // use _this_ to refer to data before it's added to db.
+    this.password = await bcrypt.hash(this.password, salt)
     next();
 })
 
