@@ -58,9 +58,14 @@ export const login_get = (req, res) => {
     res.render('login')
 }
 
-export const login_post = (req, res) => {
+export const login_post = async (req, res) => {
     const { email, password } = req.body
 
-    console.log(email, password)
-    res.send('user login')
+    try {
+        const user = await User.login(email, password)
+        res.status(200).json({ user: user._id })
+    }
+    catch (err) {
+        res.status(400).json({})
+    }
 }
