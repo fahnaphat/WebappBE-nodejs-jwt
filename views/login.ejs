@@ -1,5 +1,5 @@
 <%- include('components/header'); -%>
-    <form action="">
+    <form>
         <h2>Login</h2>
         <label for="email">Email</label>
         <input type="text" name="email">
@@ -40,7 +40,7 @@
                     passwordError.textContent = data.errors.password
                 }
                 if (data.user) {
-                    // location.assign('/')
+                    location.assign('/')
                 }
             } catch(err) {
                 console.log(err)
