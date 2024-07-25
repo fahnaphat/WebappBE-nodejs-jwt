@@ -1,5 +1,5 @@
 <%- include('components/header'); -%>
-    <form action="" method="post">
+    <form action="" method="">
         <h2>Sign up</h2>
         <label for="fname">First name</label>
         <input type="text" name="fname">
@@ -10,13 +10,36 @@
         <label for="email">Email</label>
         <input type="text" name="email">
         <div class="email-error"></div>
-        <label for="password">Password</label>
+        <label for="password">Create Password</label>
         <input type="password" name="password">
         <small class="pwd-detail">password must be less than 6 characters</small>
         <div class="password-error"></div>
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" name="confirm-password">
-        <div class="confirm-password-error"></div>
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" name="confirmpassword">
+        <div class="confirm-password-error" id="confirmpassword-error"></div>
         <button type="submit" class="button">Sign up</button>
     </form>
+
+    <script>
+        const form = document.querySelector('form')
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // get the values
+            const firstname = form.fname.value
+            const lastname = form.lname.value
+            const email = form.email.value
+            const password = form.password.value
+            const confirm_pwd = form.confirmpassword.value
+
+            if (password != confirm_pwd) {
+                document.getElementById('confirmpassword-error').innerHTML = "Passwords don't match"
+                return 0;
+            }
+
+            console.log(firstname, lastname, email, password, confirm_pwd)
+        })
+
+    </script>
 <%- include('components/footer'); -%>
