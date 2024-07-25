@@ -44,9 +44,7 @@ export const signup_post = async (req, res) => {
         const user = await User.create({ firstname, lastname, email, password })
         const token = createToken(user._id)
         res.cookie('jwt', token, { httpOnly: true, maxAge: expireDate * 1000 })     // maxAge of cookies expects a time in milliseconds
-
         res.status(201).json({ user: user._id })
-
     } catch (err) {
         const errors = handleErrors(err)
         res.status(400).json({ errors })

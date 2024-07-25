@@ -22,9 +22,20 @@
 
     <script>
         const form = document.querySelector('form')
+        const firstnameError = document.querySelector('.fname-error')
+        const lastnameError = document.querySelector('.lname-error')
+        const emailError = document.querySelector('.email-error')
+        const passwordError = document.querySelector('.password-error')
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // reset errors
+            firstnameError.textContent = ''
+            lastnameError.textContent = ''
+            emailError.textContent = ''
+            passwordError.textContent = ''
+            document.getElementById('confirmpassword-error').innerHTML = ''
 
             // get the values
             const firstname = form.fname.value
@@ -44,6 +55,22 @@
                     body: JSON.stringify({ firstname, lastname, email, password }),
                     headers: { 'Content-type': 'application/json' }
                 })
+
+                // get response from server after called /signup api
+                const data = await res.json()
+                console.log(data)
+                
+                if (data.errors) {
+                    firstnameError.textContent = data.errors.firstname
+                    lastnameError.textContent = data.errors.lastname
+                    emailError.textContent = data.errors.email
+                    passwordError.textContent = data.errors.password
+                }
+
+                if (data.user) {
+                    // redirect to the home page
+                    location.assign('/')
+                }
             } catch (err) {
                 console.log(err)
             }
