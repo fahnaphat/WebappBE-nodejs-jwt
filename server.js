@@ -1,6 +1,7 @@
-import express from "express"
-import mongoose from "mongoose"
-import dotenv from "dotenv"
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
 import authRoutes from './routes/authRoutes.js'
 
@@ -13,6 +14,7 @@ const port = process.env.PORT || 5500
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true })) // to parse form data
+app.use(cookieParser())
 
 // view engine
 app.set('view engine', 'ejs')
