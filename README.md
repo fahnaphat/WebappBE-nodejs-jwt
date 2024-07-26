@@ -2,7 +2,7 @@
 A project for Backend practice using Node.js and JWT for authentication, utilizing MongoDB as the database to store data.
 
 ## Introduction
-All materials in this branch pertain to the complete login feature.
+All materials in this branch pertain to the complete login and logout feature.
 
 ## Getting Started
 
