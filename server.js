@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 
-import authRoutes from './routes/authRoutes.js'
+import authRoutes from "./routes/authRoutes.js";
+import requireAuth from "./middleware/authMiddleware.js";
 
 dotenv.config({ path: './.env' })
 const app = express()
@@ -32,7 +33,7 @@ async function connectdb() {
 connectdb();
 
 app.get('/', (req, res) => res.render('home'))
-app.get('/post', (req, res) => res.render('post'))
+app.get('/post', requireAuth, (req, res) => res.render('post'))
 // app.use((req, res, next) => {
 //     console.log(`Request URL: ${req.url}, Method: ${req.method}`)
 //     next()
