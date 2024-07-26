@@ -1,4 +1,4 @@
-# developed authentication with json web token
+# Developed Authentication with Json Web Token
 A project for Backend practice using Node.js and JWT for authentication, utilizing MongoDB as the database to store data.
 
 ## Getting Started
@@ -8,15 +8,15 @@ A project for Backend practice using Node.js and JWT for authentication, utilizi
   https://github.com/fahnaphat/appBE-nodejs-jwt.git 
   ```
  2. Create a `.env` file and add the following variables :
- - Database URL (MongoDB)
+   - Database URL (MongoDB)
  ```
  DATABASE_MONGO=""
  ```
- - Server Configuration
+   - Server Configuration
  ```
  PORT=4000
  ```
- - JWT Secret Key
+   - JWT Secret Key
  ```
  SECRET_KEY=""
  ```
